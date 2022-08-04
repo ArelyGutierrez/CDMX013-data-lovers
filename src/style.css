@@ -1,0 +1,53 @@
+
+body{
+    background-image: url(https://th.bing.com/th/id/R.925484d28ec5b35045128a4e647ce03b?rik=qDjf23Mmybk%2bKg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20131030045751%2fharrypotter%2fimages%2f8%2f8e%2fHogwarts_Gif.gif&ehk=7jB%2bjnosZXbU7DsUxdH3nc71Y3UobyGxqOEQZ2DRYHQ%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center; 
+    background-size:cover;         /*para ajustarse a la pantalla a lo ancho*/
+    background-attachment:fixed; /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
+}
+
+img{
+    /*display:flex;*/
+    max-width: 25%;
+    height: 25%;
+}
+
+
+
+ul {  /*quita las viñetas*/
+    list-style-type: none;   
+}
+
+li {
+    display: inline; /*pone en línea opciones en el navegador*/
+    text-align:center;
+    padding: 1em 2em; 
+   
+    
+}
+a{
+    text-decoration: none; /*quita lo subrayado del link*/
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    color: #B78E25;
+    
+    /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
+}
+
+nav{
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-color: #B78E25;;
+    border-bottom-shado;    
+    box-shadow: 0px 6px 4px #F5F5F5;
+    font-family: 'MedievalSharp', cursive;
+
+   
+
+}
+
+
