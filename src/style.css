@@ -1,21 +1,26 @@
-body{
+body {
     background-image: url(https://th.bing.com/th/id/R.925484d28ec5b35045128a4e647ce03b?rik=qDjf23Mmybk%2bKg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20131030045751%2fharrypotter%2fimages%2f8%2f8e%2fHogwarts_Gif.gif&ehk=7jB%2bjnosZXbU7DsUxdH3nc71Y3UobyGxqOEQZ2DRYHQ%3d&risl=&pid=ImgRaw&r=0);
     background-position: center;
-    background-size:cover;         /*para ajustarse a la pantalla a lo ancho*/
-    background-attachment:fixed; /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
+    background-size: cover;
+    /*para ajustarse a la pantalla a lo ancho*/
+    background-attachment: fixed;
+    /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
-img{
+
+img {
     /*display:flex;*/
     max-width: 25%;
     width: 10em;
     height: 10em;
 }
-.charactersStyle{
+
+.charactersStyle {
     display: inline-grid;
     flex-direction: row;
     flex-wrap: wrap;
     color: white;
     background-color: rgba(127, 255, 212, 0.233);
+    transition: .5s;
     border: solid 1px white;
     padding: 2% 2% 2% 2%;
     margin: 1%;
@@ -27,21 +32,80 @@ img{
     font-family: 'MedievalSharp';
     text-shadow: 50% 50% 50% 50% #0A0A0A;
     letter-spacing: .2em;
-    align-items:stretch;
+    align-items: stretch;
 }
-#showCharacter{
+
+.charactersStyle:hover {
+    background-color: #b78e2598;
+}
+
+#showCharacter {
     margin-left: 5%;
 }
-ul {  /*quita las viñetas*/
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+ul {
+    /*quita las viñetas*/
     list-style-type: none;
 }
+
 li {
-    display: inline; /*pone en línea opciones en el navegador*/
-    text-align:center;
+    display: inline;
+    /*pone en línea opciones en el navegador*/
+    text-align: center;
     padding: 1em 2em;
 }
-a{
-    text-decoration: none; /*quita lo subrayado del link*/
+
+a {
+    text-decoration: none;
+    /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
     font-style: normal;
     font-weight: 500;
@@ -51,31 +115,36 @@ a{
     color: #B78E25;
     /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
 }
-nav{
+
+nav {
     border-bottom-style: solid;
     border-bottom-width: thick;
-    border-bottom-color: #B78E25;;
+    border-bottom-color: #B78E25;
+    ;
     /*border-bottom-shadow; */
     box-shadow: 0px 6px 4px #F5F5F5;
     font-family: 'MedievalSharp', cursive;
     display: flex;
     flex-wrap: wrap;
 }
-footer{
-    display:flex;
+
+footer {
+    display: flex;
     justify-content: space-between;
     background-color: black;
     font-family: 'MedievalSharp';
     color: white;
     letter-spacing: .2em;
 }
-#imgFooter1{
+
+#imgFooter1 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
-#imgFooter2{
+
+#imgFooter2 {
     display: flexbox;
     width: 5em;
     height: 3em;
