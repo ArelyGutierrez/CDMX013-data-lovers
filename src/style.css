@@ -12,7 +12,26 @@ img{
     height: 25%;
 }
 
+.charactersStyle{
+    display: inline-grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgba(127, 255, 212, 0.233);
+    border: solid 1px white;
+    padding: 2%; 
+    margin: 1%;  
+    width: 10em;
+    height: 3em;
+    align-self: stretch;
+    justify-content: stretch;
+    text-align: center;
+    font-family: 'MedievalSharp';
+    text-shadow: 10% 10% 10% 10% #0a0a0a;
+    letter-spacing: .2em;
 
+    
+}
 
 ul {  /*quita las viñetas*/
     list-style-type: none;   
@@ -42,7 +61,7 @@ nav{
     border-bottom-style: solid;
     border-bottom-width: thick;
     border-bottom-color: #B78E25;;
-    border-bottom-shado;    
+    /*border-bottom-shadow; */   
     box-shadow: 0px 6px 4px #F5F5F5;
     font-family: 'MedievalSharp', cursive;
 
