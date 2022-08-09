@@ -84,13 +84,11 @@ footer{
     width: 5em;
     height: 3em;
     justify-content: space-between;
-
-
 }
 
 #imgFooter2{
     display: flexbox;
     width: 5em;
     height: 3em;
-    justify-content: space-between
+    justify-content: space-between;
 }
