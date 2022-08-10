@@ -24,8 +24,8 @@ img {
     border: solid 1px white;
     padding: 2% 2% 2% 2%;
     margin: 1%;
-    width: 10em;
-    height: 3em;
+    width: 15em;/*10em*/
+    height: 8em;/*3em*/
     align-self: stretch;
     justify-content: stretch;
     text-align: center;
@@ -33,10 +33,14 @@ img {
     text-shadow: 50% 50% 50% 50% #0A0A0A;
     letter-spacing: .2em;
     align-items: stretch;
+    border-bottom-color: #B78E25;
+    
 }
 
 .charactersStyle:hover {
     background-color: #b78e2598;
+    transform:scale(1.2);
+    text-shadow: #0A0A0A;
 }
 
 #showCharacter {
@@ -62,6 +66,8 @@ img {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
+    background-image: url(https://www.bing.com/images/search?view=detailV2&ccid=GufiIVOw&id=5AB4C2671BE2D563D03DB2209FA89E1A430ECD49&thid=OIP.GufiIVOw_zj9HYUbelQuMAHaEH&mediaurl=https%3a%2f%2fimg2.freepng.es%2f20190423%2fbae%2fkisspng-portable-network-graphics-parchment-paper-clip-art-nunca-mais-as-velhas-cartas-sou4-4-5cbeb6e0424eb0.2307225115560025282716.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1ae7e22153b0ff38fd1d851b7a542e30%3frik%3dSc0OQxqeqJ8gsg%26pid%3dImgRaw%26r%3d0&exph=500&expw=900&q=hoja+antigua+sin+fondo+sin+marca+de+agua&simid=608022693565771216&FORM=IRPRST&ck=B316E66C5CD866C521D77106F56C2C14&selectedIndex=5&ajaxhist=0&ajaxserp=0);
+    font-family: 'MedievalSharp';
 }
 
 /* Modal Content/Box */
@@ -88,6 +94,7 @@ img {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    
 }
 
 
@@ -120,7 +127,7 @@ nav {
     border-bottom-style: solid;
     border-bottom-width: thick;
     border-bottom-color: #B78E25;
-    ;
+    
     /*border-bottom-shadow; */
     box-shadow: 0px 6px 4px #F5F5F5;
     font-family: 'MedievalSharp', cursive;
@@ -150,3 +157,15 @@ footer {
     height: 3em;
     justify-content: space-between;
 }
+
+li.students{
+    border-top-style: solid;
+    border-top-width: thick;
+    border-top-color: #B78E25;
+    /*border-bottom-shadow; */
+    box-shadow: 0px 6px 4px #F5F5F5;
+    font-family: 'MedievalSharp', cursive;
+    display: flex;
+    flex-wrap: wrap;
+}
+
