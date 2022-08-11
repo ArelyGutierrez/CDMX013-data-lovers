@@ -24,8 +24,8 @@ img {
     border: solid 1px white;
     padding: 2% 2% 2% 2%;
     margin: 1%;
-    width: 10em;
-    height: 3em;
+    width: 15em;/*10*/
+    height: 8em;/*3em*/
     align-self: stretch;
     justify-content: stretch;
     text-align: center;

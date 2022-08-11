@@ -5,19 +5,10 @@ const allCharacters = datos.characters;
 const generadorHTML = (character) => {
  //*let newDiv = document.createElement("div")*/
   let characters =
-    `<button id="charactersStyle" class="charactersStyle">
-            <p>${character.name}</p>
+    `<button class="charactersStyle">
+            <p id="${character.id}">${character.name}</p>
           </button>
-
-          <div id="myModal" class="modal"> 
-              <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Name: ${character.name}</p>
-              <p>Birth: ${character.birth}</p>
-              <p>Species: ${character.species}</p>
-              <p>House: ${character.house}</p>
-              </div>
-          </div>`;
+`;
   
   return characters;
 }
@@ -27,21 +18,38 @@ allCharacters.forEach(oneCharacter => todoelHTML += generadorHTML(oneCharacter))
 document.getElementById("showCharacter").innerHTML = todoelHTML;
 
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
 // Get the div character that opens the modal
-var btn = document.getElementById("charactersStyle");
+var btn = document.getElementsByClassName("charactersStyle");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
+for (let i=0; i<btn.length; i++){
+  btn[i].onclick = function (e){
+    const id= e.srcElement.id;
 
-// When the user clicks on <span> (x), close the modal
+    todoelHTML += `
+
+  <div id="myModal" class="modal"> 
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Name: ${allCharacters[id].name}</p>
+      <p>Birth: ${allCharacters[id].birth}</p>
+      <p>Species: ${allCharacters[id].species}</p>
+      <p>House: ${allCharacters[id].house}</p>
+      </div>
+  </div>`;
+    console.log("hola")
+    console.log(e);
+// Get the modal
+var modal = document.getElementById("myModal");
+
+    /*modal.style.display = "block";*/
+    
+    console.log(id);
+
+    // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 }
@@ -52,3 +60,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }  
+}
+}
+
+
