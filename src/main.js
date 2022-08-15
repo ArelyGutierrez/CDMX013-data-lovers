@@ -1,7 +1,9 @@
-//import { userStory1 } from './data.js'; //import { example } from './data.js';
+import {filtrado} from './data.js'; //import { example } from './data.js';
 import datos from "./data/harrypotter/harrypotterdata.js";
+
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
+
   //*let newDiv = document.createElement("div")*/
   let characters = `<button id="${character.id}" class="charactersStyle">
             <p>${character.name}</p>
@@ -20,7 +22,21 @@ allCharacters.forEach(
   (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter))
 );
 document.getElementById("showCharacter").innerHTML = todoelHTML;
-// Get the modal
+////////////////////////////////////////////////////////////////
+
+let gryffindorOpt = document.getElementById("casa")
+gryffindorOpt.addEventListener("click", function (event) {
+  console.log();
+  todoelHTML = "";
+filtrado(event.target.value).forEach( (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)))
+document.getElementById("showCharacter").innerHTML = todoelHTML;
+})
+
+
+
+///////
+
+/*// Get the modal
 var modal = document.getElementById("myModal");
 // Get the div character that opens the modal
 var btn = document.getElementsByClassName("charactersStyle");
@@ -53,4 +69,4 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-};
+};*/
