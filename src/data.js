@@ -9,14 +9,14 @@ export const filterHousesFunction = (casa) => {
   return filteredHouse;
 };
 
-export const filterGenderFunction = (casa) => {
-  let filteredGender= allCharacters.filter(character => character.gender === casa )
+export const filterGenderFunction = (genero) => {
+  let filteredGender= allCharacters.filter(character => character.gender === genero )
 //console.log(gryffindorFilter)
   return filteredGender;
 };
 
-export const filterSpellsFunction = (casa) => {
-  let filteredSpells= allSpells.filter( spells => spells.spell_type === casa )
+export const filterSpellsFunction = (hechizo) => {
+  let filteredSpells= allSpells.filter( spells => spells.spell_type === hechizo )
 //console.log(gryffindorFilter)
   return filteredSpells;
 };
