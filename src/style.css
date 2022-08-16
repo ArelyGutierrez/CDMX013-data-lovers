@@ -6,14 +6,12 @@ body {
     background-attachment: fixed;
     /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
-
 img {
     /*display:flex;*/
     max-width: 25%;
     width: 10em;
     height: 10em;
 }
-
 .charactersStyle {
     display: inline-grid;
     flex-direction: row;
@@ -34,15 +32,14 @@ img {
     letter-spacing: .2em;
     align-items: stretch;
 }
-
 .charactersStyle:hover {
     background-color: #b78e2598;
+    transform:scale(1.2);
+    text-shadow: #0A0A0A
 }
-
 #showCharacter {
     margin-left: 5%;
 }
-
 .modal {
     display: none;
     /* Hidden by default */
@@ -63,10 +60,9 @@ img {
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #FEFEFE;
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
@@ -74,7 +70,6 @@ img {
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
-
 /* The Close Button */
 .close {
     color: #aaa;
@@ -82,28 +77,23 @@ img {
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-
-
 ul {
     /*quita las viñetas*/
     list-style-type: none;
 }
-
 li {
     display: inline;
     /*pone en línea opciones en el navegador*/
     text-align: center;
     padding: 1em 2em;
 }
-
-a {
+select {
     text-decoration: none;
     /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
@@ -113,9 +103,10 @@ a {
     line-height: 41px;
     text-align: center;
     color: #B78E25;
+    background-color: transparent;
+    border-color: transparent;
     /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
 }
-
 nav {
     border-bottom-style: solid;
     border-bottom-width: thick;
@@ -127,7 +118,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
 }
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -136,17 +126,16 @@ footer {
     color: white;
     letter-spacing: .2em;
 }
-
 #imgFooter1 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
-
 #imgFooter2 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
+

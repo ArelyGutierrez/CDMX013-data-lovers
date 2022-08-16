@@ -15056,7 +15056,7 @@ export default {
       "name": "Surgito",
       "other_name": null,
       "pronunciation": "SUR-jee-toh",
-      "spell_type": "Counter-charm",
+      "spell_type": "Counter-Charm",
       "description": "Counter-charm that can be used to remove enchantments.",
       "mention": "In 1927, Newton Scamander used Surgito to lift an enchantment that was placed on Jacob Kowalski. As a result of the spell, Kowalski awoke from the dreamlike enchanted state, and regained an awareness of reality in the present.",
       "etymology": "Surgito is a Latin word in the imperative form meaning \"you/he/she shall arise, or get up\", and is a conjugation of the verb surgo (\"I arise\"). The etymology is appropriate, considering that the effects of the spell on Jacob Kowalski can be likened to waking up from a confused, dreamlike state.",
