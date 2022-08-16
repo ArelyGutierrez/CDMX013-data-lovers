@@ -1,4 +1,8 @@
-import {filtrado} from './data.js'; //import { example } from './data.js';
+import {filterHousesFunction} from './data.js'; //import { example } from './data.js';
+import {filterGenderFunction} from './data.js'; 
+import {filterSpellsFunction} from './data.js'; 
+//import {filterSpellsFunction} from './data.js';
+
 import datos from "./data/harrypotter/harrypotterdata.js";
 
 const allCharacters = datos.characters;
@@ -17,21 +21,33 @@ const generadorHTML = (character) => {
           </div>`;
   return characters;
 };
+
+///////muestra personajes en pantalla
 let todoelHTML = "";
-allCharacters.forEach(
-  (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter))
-);
+allCharacters.forEach( (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)));
 document.getElementById("showCharacter").innerHTML = todoelHTML;
 ////////////////////////////////////////////////////////////////
 
-let gryffindorOpt = document.getElementById("casa")
-gryffindorOpt.addEventListener("click", function (event) {
-  console.log();
+let houseOption = document.getElementById("casaId")
+houseOption.addEventListener("click", function (event) {
   todoelHTML = "";
-filtrado(event.target.value).forEach( (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)))
+filterHousesFunction(event.target.value).forEach( (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)))
 document.getElementById("showCharacter").innerHTML = todoelHTML;
 })
 
+let genderOption = document.getElementById("genderId")
+genderOption.addEventListener("click", function (event) {
+  todoelHTML = "";
+filterGenderFunction(event.target.value).forEach( (oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)))
+document.getElementById("showCharacter").innerHTML = todoelHTML;
+})
+
+let spellsOption = document.getElementById("spellsId")
+spellsOption.addEventListener("click", function (event) {
+  todoelHTML = "";
+filterSpellsFunction(event.target.value).forEach( (oneSpell) => (todoelHTML += generadorHTML(oneSpell)))
+document.getElementById("showCharacter").innerHTML = todoelHTML;
+})
 
 
 ///////
