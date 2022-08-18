@@ -10,18 +10,14 @@ const generadorHTML = (character) => {
 
   //*let newDiv = document.createElement("div")*/
   let characters = `<button id="${character.id}" class="charactersStyle">
-            <p><strong>${character.name}</strong></p>
+            <p ><strong>${character.name}</strong></p>
+            <div id="extraInfo">
             <p>Birth: ${character.birth}</p>
             <p>Species: ${character.species}</p>
-            <p>House${character.house}</p>
-          </button>
-          <div id="myModal" class="modal">
-              <div class="modal-content">
-              <span class="close">&times;</span>
-              <div id="characterData">
-              </div>
-              </div>
-          </div>`;
+            <p>House:${character.house}</p>
+            </div>
+            </button>
+            `;
   return characters;
 };
 
