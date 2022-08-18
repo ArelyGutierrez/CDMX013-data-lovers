@@ -14,7 +14,7 @@ const generadorHTML = (character) => {
             <div id="extraInfo">
             <p>Birth: ${character.birth}</p>
             <p>Species: ${character.species}</p>
-            <p>House${character.house}</p>
+            <p>House:${character.house}</p>
             </div>
             </button>
             `;
