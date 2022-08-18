@@ -10,7 +10,10 @@ const generadorHTML = (character) => {
 
   //*let newDiv = document.createElement("div")*/
   let characters = `<button id="${character.id}" class="charactersStyle">
-            <p>${character.name}</p>
+            <p><strong>${character.name}</strong></p>
+            <p>Birth: ${character.birth}</p>
+            <p>Species: ${character.species}</p>
+            <p>House${character.house}</p>
           </button>
           <div id="myModal" class="modal">
               <div class="modal-content">
@@ -49,13 +52,19 @@ filterSpellsFunction(event.target.value).forEach( (oneSpell) => (todoelHTML += g
 document.getElementById("showCharacter").innerHTML = todoelHTML;
 })
 
+let sortAtoZOption = document.getElementById("spellsId")
+sortAtoZOption.addEventListener("click", function (event) {
+  filterGenderFunction(event.target.value)
+})
 
-///////
+//forEach(allCharacters)
+//console.log(forEach(allCharacters));
 
+// console.log(allCharacters[i].name);
 /*// Get the modal
 var modal = document.getElementById("myModal");
 // Get the div character that opens the modal
-var btn = document.getElementsByClassName("charactersStyle");
+var btn = document.getElementsByClassName("charactsStyle");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 const insertDataToModal = (id) => {
@@ -68,7 +77,7 @@ const insertDataToModal = (id) => {
    <p>Species: ${character.species}</p>
    <p>House: ${character.house}</p>`;
 };
-// When the user clicks on the button, open the modal
+// When the user clickon the button, open the modal
 for (let i = 0; i < btn.length; i++) {
   btn[i].onclick = function (e) {
     const id = e.srcElement.id;
