@@ -6,49 +6,56 @@ body {
     background-attachment: fixed;
     /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
+
 img {
     /*display:flex;*/
     max-width: 25%;
     width: 8em;
     height: 8em;
 }
-.charactersStyle{
+
+.charactersStyle {
     display: inline-grid;
     flex-direction: row;
     flex-wrap: wrap;
     color: black;
-    background-color: rgba(127, 255, 212, 0.356);
+    background-color: rgba(127, 255, 212, 0.438);
     transition: .5s;
     border: solid 1px white;
     padding: 2% 2% 2% 2%;
     margin: 1%;
-    width: 15em;/*10*/
-    height: 8em;/*3em*/
+    width: 15em;
+    /*10*/
+    height: 8em;
+    /*3em*/
     align-self: stretch;
     justify-content: stretch;
     text-align: center;
-    font-family: Helvetica, sans-serif, Arial;/*'MedievalSharp';*/
+    font-family: Helvetica, sans-serif, Arial;
+    /*'MedievalSharp';*/
     letter-spacing: .2em;
     align-items: stretch;
 }
-.charactersStyle #extraInfo{
+
+.charactersStyle #extraInfo {
     visibility: hidden;
     transition: 0.3s ease-in-out;
-    }
-.charactersStyle:hover{
-    background-color: #b78e25b0;
-    transform:scale(1.2);
-    text-shadow: #0A0A0A
-    position: relative;
+}
+
+.charactersStyle:hover {
+    background-color: #b78e25c2;
+    transform: scale(1.2);
+    text-shadow: #0A0A0A position: relative;
     top: -51px;
     padding: 10px 15px;
     text-align: center;
-    height:16em
+    height: 16em
 }
+
 .charactersStyle:hover #extraInfo {
     visibility: visible;
     transition-delay: 0.2s;
-    }
+}
 
 #showCharacter {
     margin-left: 5%;
@@ -58,26 +65,30 @@ ul {
     /*quita las viñetas*/
     list-style-type: none;
 }
+
 li {
     display: inline;
     /*pone en línea opciones en el navegador*/
     text-align: center;
     /*padding: 1em 1em;*/
-}
+ }
+
 select {
     text-decoration: none;
     /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
     font-style: normal;
-    font-weight: 1em;/*500*/
+    font-weight: 1em;
+    /*500*/
     font-size: 1.8em;
     line-height: 41px;
     text-align: center;
     color: #B78E25;
     background-color: transparent;
     border-color: transparent;
-    /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
+    /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/  
 }
+
 nav {
     border-bottom-style: solid;
     border-bottom-width: thick;
@@ -87,7 +98,8 @@ nav {
     font-family: 'MedievalSharp', cursive;
     display: flex;
     flex-wrap: wrap;
-}
+   }
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -96,16 +108,17 @@ footer {
     color: white;
     letter-spacing: .2em;
 }
+
 #imgFooter1 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
+
 #imgFooter2 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
-
