@@ -1,9 +1,15 @@
 import {filterHousesFunction} from './data.js'; //import { example } from './data.js';
 import {filterGenderFunction} from './data.js'; 
 import {filterSpellsFunction} from './data.js'; 
+import {sortAtoZFunction} from './data.js';
 //import {filterSpellsFunction} from './data.js';
 
 import datos from "./data/harrypotter/harrypotterdata.js";
+
+window.addEventListener("scroll", function() {
+	var header = this.document.querySelector("header");
+	header.classList.toggle("abajo",window.scrollY>0);
+	})
 
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
@@ -48,9 +54,9 @@ filterSpellsFunction(event.target.value).forEach( (oneSpell) => (todoelHTML += g
 document.getElementById("showCharacter").innerHTML = todoelHTML;
 })
 
-let sortAtoZOption = document.getElementById("spellsId")
+let sortAtoZOption = document.getElementById("filter")
 sortAtoZOption.addEventListener("click", function (event) {
-  filterGenderFunction(event.target.value)
+    console.log(sortAtoZFunction())
 })
 
 //forEach(allCharacters)

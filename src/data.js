@@ -2,6 +2,7 @@
 import datos from "./data/harrypotter/harrypotterdata.js";
 const allCharacters = datos.characters;
 const allSpells = datos.spells;
+const allNames = allCharacters.name;
 
 export const filterHousesFunction = (casa) => {
   let filteredHouse= allCharacters.filter(character => character.house === casa )
@@ -21,12 +22,12 @@ export const filterSpellsFunction = (hechizo) => {
   return filteredSpells;
 };
 
-/*export const sortAtoZFunction = () => {
-   let sortedAtoZ = allCharacters.sort()
+export const sortAtoZFunction = () => {
+   let sortedAtoZ = allNames.sort();
 return sortedAtoZ;
 };
 
-export const sortZtoAFunction = () => {
+/*export const sortZtoAFunction = () => {
   let sortedZtoA = allCharacters.sort().reverse();
 return sortedZtoA;
 };*/

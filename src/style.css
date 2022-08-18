@@ -89,7 +89,12 @@ select {
     /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/  
 }
 
-nav {
+header{
+    position:fixed;
+    padding: 15px 20px;
+
+}
+nav {  
     border-bottom-style: solid;
     border-bottom-width: thick;
     border-bottom-color: #B78E25;
