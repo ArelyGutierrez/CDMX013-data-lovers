@@ -1,4 +1,83 @@
 body {
+    background-color: #0A0A0A;
+}
+
+header {
+    /*position:fixed;*/
+    size: 150px;
+    /*padding: 15px 20px;*/
+    margin-bottom: 20px;
+    width: 100%;
+    /*overflow: hidden; /*para poder desplazar izquierda o derecha algunos elementos y con esto evitamos que halla error*/
+}
+
+/*.header2{
+    position:fixed;
+}*/
+h1 {
+    flex-wrap: wrap;
+    /*float: center;*/
+    font-family: 'MedievalSharp';
+    color: #B78E25;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+img {
+    /*display:flex;*/
+    max-width: 25%;
+    width: 8em;
+    height: 8em;
+    float: left;
+}
+
+nav {
+    background-color: #0a0a0a75;
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-color: #B78E25;
+    /*border-bottom-shadow; */
+    box-shadow: 0px 4px 0px 0px #f5f5f5be;
+    font-family: 'MedievalSharp', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    /*position: -webkit-sticky;*/
+    margin: 10px 10px 0px 0px;
+    justify-content: center;
+}
+
+ul {
+    /*quita las viñetas*/
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+li {
+    display: inline;
+    /*pone en línea opciones en el navegador*/
+    text-align: center;
+    /*padding: 1em 1em;*/
+}
+
+select {
+    text-decoration: none;
+    /*quita lo subrayado del link*/
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 1em;
+    /*500*/
+    font-size: 1.8em;
+    line-height: 41px;
+    text-align: center;
+    color: #B78E25;
+    background-color: transparent;
+    border-color: transparent;
+    /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
+}
+
+main {
+    margin: 0;
+    padding: 0;
     background-image: url(https://th.bing.com/th/id/R.925484d28ec5b35045128a4e647ce03b?rik=qDjf23Mmybk%2bKg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20131030045751%2fharrypotter%2fimages%2f8%2f8e%2fHogwarts_Gif.gif&ehk=7jB%2bjnosZXbU7DsUxdH3nc71Y3UobyGxqOEQZ2DRYHQ%3d&risl=&pid=ImgRaw&r=0);
     background-position: center;
     background-size: cover;
@@ -7,17 +86,11 @@ body {
     /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
 
-img {
-    /*display:flex;*/
-    max-width: 25%;
-    width: 8em;
-    height: 8em;
-}
-
 .charactersStyle {
     display: inline-grid;
     flex-direction: row;
     flex-wrap: wrap;
+    position: static;
     color: black;
     background-color: rgba(127, 255, 212, 0.438);
     transition: .5s;
@@ -45,7 +118,7 @@ img {
 .charactersStyle:hover {
     background-color: #b78e25c2;
     transform: scale(1.2);
-    text-shadow: #0A0A0A position: relative;
+    text-shadow: #0A0A0A position:relative;
     top: -51px;
     padding: 10px 15px;
     text-align: center;
@@ -60,50 +133,6 @@ img {
 #showCharacter {
     margin-left: 5%;
 }
-
-ul {
-    /*quita las viñetas*/
-    list-style-type: none;
-}
-
-li {
-    display: inline;
-    /*pone en línea opciones en el navegador*/
-    text-align: center;
-    /*padding: 1em 1em;*/
- }
-
-select {
-    text-decoration: none;
-    /*quita lo subrayado del link*/
-    font-family: 'MedievalSharp';
-    font-style: normal;
-    font-weight: 1em;
-    /*500*/
-    font-size: 1.8em;
-    line-height: 41px;
-    text-align: center;
-    color: #B78E25;
-    background-color: transparent;
-    border-color: transparent;
-    /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/  
-}
-
-header{
-    position:fixed;
-    padding: 15px 20px;
-
-}
-nav {  
-    border-bottom-style: solid;
-    border-bottom-width: thick;
-    border-bottom-color: #B78E25;
-    /*border-bottom-shadow; */
-    box-shadow: 0px 4px 0px 0px #f5f5f5be;
-    font-family: 'MedievalSharp', cursive;
-    display: flex;
-    flex-wrap: wrap;
-   }
 
 footer {
     display: flex;
