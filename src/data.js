@@ -2,7 +2,8 @@
 import datos from "./data/harrypotter/harrypotterdata.js";
 const allCharacters = datos.characters;
 const allSpells = datos.spells;
-const allNames = allCharacters.name;
+/*const allNames = allCharacters.name;*/
+
 export const filterHousesFunction = (casa) => {
   let filteredHouse= allCharacters.filter(character => character.house === casa )
 //console.log(filteredHouse)
@@ -18,10 +19,19 @@ export const filterSpellsFunction = (hechizo) => {
 //console.log(gryffindorFilter)
   return filteredSpells;
 };
-export const sortAtoZFunction = () => {
-   let sortedAtoZ = allNames.sort();
-return sortedAtoZ;
-};
+export const sortAtoZFunction =  allCharacters
+sortAtoZFunction.sort((a, b) => {
+    if(a.name.toLowerCase() < b.name.toLowerCase()){
+      return -1;
+    }
+    if(a.name.toLowerCase() > b.name.toLowerCase()){
+      return 1;
+    }
+    return 0
+   }
+   );
+console.log(sortAtoZFunction);
+
 /*export const sortZtoAFunction = () => {
   let sortedZtoA = allCharacters.sort().reverse();
 return sortedZtoA;
