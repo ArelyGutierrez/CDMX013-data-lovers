@@ -12,64 +12,71 @@
 
 <body>
   <div id="root"></div>
-  <header>
-    
-    <nav class="Menu">
-     
-      <ul>
-        <li><img src="./images//hogwarts_png_by_edicionesmg_d74huma-fullview.png"></div></li>
-        <li><select id="genderId" name="select" class="botones">
-            <option value="Students" selected>Students</option>
-            <option id="Female" value="Female">Female</option>
-            <option id="Male" value="Male">Male</option>
-          </select></li>
+  
+  <section>
+  <header class="header2">
+    <div class="logo"><img src="./images//hogwarts_png_by_edicionesmg_d74huma-fullview.png"></div>
+    <h1>Hogwarts School of Witchcraft and Wizardry </h1>
+  </section>
 
-        <li><select id="casaId" name="select" class="botones">
-            <option id=" " value="houses" selected>Houses</option>
-            <option id="Gryffindor" value="Gryffindor">Gryffindor</option>
-            <option id="Hufflepuff" value="Hufflepuff">Hufflepuff</option>
-            <option id="Ravenclaw" value="Ravenclaw">Ravenclaw</option>
-            <option id="Slytherin" value="Slytherin">Slytherin</option>
-            <option id="Unknown" value="Unknown">Unknown</option>
-          </select></li>
-
-        <li><select id="spellsId" name="select" class="botones">
-            <option value="Spells Types" selected>Spell Types</option>
-            <option id="Charm" value="Charm">Charm</option>
-            <option id="Conjuration" value="Conjuration">Conjuration</option>
-            <option id="Counter-Charm" value="Counter-Charm">Counter-Charm</option>
-            <option id="Counter-Spell" value="Counter-Spell">Counter-Spell</option>
-            <option id="Curse" value="Curse">Curse</option>
-            <option id="Dark charm" value="Dark charm">Dark charm</option>
-            <option id="Dark Arts" value="Dark Arts">Dark Arts</option>
-            <option id="Healing Spell" value="Healing Spell">Healing Spell</option>
-            <option id="Hex" value="Hex">Hex</option>
-            <option id="Jinx" value="Jinx">Jinx</option>
-            <option id="Spell" value="Spell">Spell</option>
-            <option id="Transfiguration" value="Transfiguration">Transfiguration</option>
-            <option id="Transportation" value="Transportation">Transportation</option>
-            <option id="Untransfiguration" value="Untransfiguration">Untransfiguration</option>
-            <option id="Vanishment" value="Vanishment">Vanishment</option>
-          </select></li>
-
+    <section>
+      <nav class="Menu">
+      
+        <ul>
+          
+          <li><select id="genderId" name="select" class="botones">
+              <option id="Students" value="Students" selected>Characters</option>
+              <option id="Female" value="Female">Female</option>
+              <option id="Male" value="Male">Male</option>
+            </select></li>
+  
+          <li><select id="casaId" name="select" class="botones">
+              <option id=" " value="houses" selected>Houses</option>
+              <option id="Gryffindor" value="Gryffindor">Gryffindor</option>
+              <option id="Hufflepuff" value="Hufflepuff">Hufflepuff</option>
+              <option id="Ravenclaw" value="Ravenclaw">Ravenclaw</option>
+              <option id="Slytherin" value="Slytherin">Slytherin</option>
+              <option id="Unknown" value="Unknown">Unknown</option>
+            </select></li>
+  
+          <li><select id="spellsId" name="select" class="botones">
+              <option value="Spells Types" selected>Spell Types</option>
+              <option id="Charm" value="Charm">Charm</option>
+              <option id="Conjuration" value="Conjuration">Conjuration</option>
+              <option id="Counter-Charm" value="Counter-Charm">Counter-Charm</option>
+              <option id="Counter-Spell" value="Counter-Spell">Counter-Spell</option>
+              <option id="Curse" value="Curse">Curse</option>
+              <option id="Dark charm" value="Dark charm">Dark charm</option>
+              <option id="Dark Arts" value="Dark Arts">Dark Arts</option>
+              <option id="Healing Spell" value="Healing Spell">Healing Spell</option>
+              <option id="Hex" value="Hex">Hex</option>
+              <option id="Jinx" value="Jinx">Jinx</option>
+              <option id="Spell" value="Spell">Spell</option>
+              <option id="Transfiguration" value="Transfiguration">Transfiguration</option>
+              <option id="Transportation" value="Transportation">Transportation</option>
+              <option id="Untransfiguration" value="Untransfiguration">Untransfiguration</option>
+              <option id="Vanishment" value="Vanishment">Vanishment</option>
+            </select></li>
+  
           <li><select id="Potions" name="select" class="botones">
-            <option value="Potions" selected>Potions</option>
-            <option value=""></option>
-          </select></li>
-
+              <option value="Potions" selected>Potions</option>
+            </select></li>
+  
           <li><select id="filter" name="select" class="botones">
-            <option value="Potions" selected>Order</option>
-            <option id="fromAtoZ" value="fromAtoZ"> A - Z</option>
-            <option id="fromZtoA" value="fromZtoA"> Z - A</option>
-          </select></li>
-
-
-      </ul>
-    </nav>
+              <option value="Order" selected>Order</option>
+              <option id="fromAtoZ" value="fromAtoZ"> A - Z</option>
+              <option id="fromZtoA" value="fromZtoA"> Z - A</option>
+            </select></li>
+        </ul>
+      </nav>
+    </section>
   </header>
+
   <main>
-    <div id="showCharacter">
-    </div>
+    
+      <div id="showCharacter">
+      </div>
+    
   </main>
   <footer id="footer">
     <img id="imgFooter1" src="./images/LENTES.png" alt="Harry Potter">
