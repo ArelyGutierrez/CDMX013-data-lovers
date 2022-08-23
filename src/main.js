@@ -2,7 +2,7 @@ import { filterHousesFunction } from './data.js'; //import { example } from './d
 import { filterGenderFunction } from './data.js';
 import { filterSpellsFunction } from './data.js';
 import { sortAtoZFunction } from './data.js';
-/*import {sortZtoAFunction} from './data.js';*/
+import {sortZtoAFunction} from './data.js';
 
 import datos from "./data/harrypotter/harrypotterdata.js";
 
@@ -95,11 +95,10 @@ sortAtoZOption.addEventListener("click", function (event) {
   }else if(event.target.value=== "fromAtoZ"){
     console.log("fromAtoZ");
     showDisplayInfo(sortAtoZFunction(allCharacters));
-}
- /* }else if(event.target.value=== "fromZtoA"){
+  }else if(event.target.value=== "fromZtoA"){
     showDisplayInfo(sortZtoAFunction(allCharacters));
 
-  }*/
+  }
 });
 
 /*let sortZtoAOption = document.getElementById("fromZtoA")

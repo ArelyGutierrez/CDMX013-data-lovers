@@ -40,7 +40,7 @@ nav {
     box-shadow: 0px 4px 0px 0px #f5f5f5be;
     font-family: 'MedievalSharp', cursive;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     /*position: -webkit-sticky;*/
     margin: 10px 10px 0px 0px;
     justify-content: center;
@@ -50,6 +50,10 @@ ul {
     /*quita las viñetas*/
     list-style-type: none;
     justify-content: space-between;
+}
+
+#SpellTypes{
+    justify-content: right;
 }
 
 li {
