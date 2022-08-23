@@ -19,8 +19,10 @@ export const filterSpellsFunction = (hechizo) => {
 //console.log(gryffindorFilter)
   return filteredSpells;
 };
-export const sortAtoZFunction =  allCharacters
-sortAtoZFunction.sort((a, b) => {
+
+/*export const sortAtoZFunction =  (arrCharacters) => arrData.sort ((a,b))=> {}*/
+export const sortAtoZFunction =  (x) =>
+allCharacters.sort((a, b) => {
     if(a.name.toLowerCase() < b.name.toLowerCase()){
       return -1;
     }
@@ -30,9 +32,18 @@ sortAtoZFunction.sort((a, b) => {
     return 0
    }
    );
-console.log(sortAtoZFunction);
+   console.log(sortAtoZFunction);
 
-/*export const sortZtoAFunction = () => {
-  let sortedZtoA = allCharacters.sort().reverse();
-return sortedZtoA;
-};*/
+/*export const sortZtoAFunction =  sortAtoZFunction.reverse()*/
+/*((a, b) => {
+  if(a.name.toLowerCase() < b.name.toLowerCase()){
+    return 1;
+  }
+  if(a.name.toLowerCase() > b.name.toLowerCase()){que
+    return -1;
+  }
+  return 0
+ }
+ ); 
+console.log(sortZtoAFunction);*/
+
