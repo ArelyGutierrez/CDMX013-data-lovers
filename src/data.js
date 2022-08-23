@@ -21,21 +21,22 @@ export const filterSpellsFunction = (hechizo) => {
 };
 
 /*export const sortAtoZFunction =  (arrCharacters) => arrData.sort ((a,b))=> {}*/
-export const sortAtoZFunction =  (x) =>
-allCharacters.sort((a, b) => {
-    if(a.name.toLowerCase() < b.name.toLowerCase()){
-      return -1;
-    }
-    if(a.name.toLowerCase() > b.name.toLowerCase()){
+export const sortAtoZFunction = function ( allCharacters ) {
+  return allCharacters.sort(function (a, b) {
+    if (a.name > b.name) {
       return 1;
     }
-    return 0
-   }
-   );
-   console.log(sortAtoZFunction);
+    if (a.name < b.name) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  }
+     
 
-/*export const sortZtoAFunction =  sortAtoZFunction.reverse()*/
-/*((a, b) => {
+/*export const sortZtoAFunction =  sortAtoZFunction.reverse()
+((a, b) => {
   if(a.name.toLowerCase() < b.name.toLowerCase()){
     return 1;
   }
@@ -46,4 +47,3 @@ allCharacters.sort((a, b) => {
  }
  ); 
 console.log(sortZtoAFunction);*/
-

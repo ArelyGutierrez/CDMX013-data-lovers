@@ -73,10 +73,10 @@ function showDisplaySpells(arr) {
   ///////muestra personajes en pantalla
   let todoelHTML = "";
   arr.forEach((oneSpell) => (todoelHTML += generadorHTMLSpells(oneSpell)));
-  document.getElementById("showSpells").innerHTML = todoelHTML; //aqui el problema
+  document.getElementById("showCharacter").innerHTML = todoelHTML; //aqui el problema
   ////////////////////////////////////////////////////////////////
 }
-showDisplaySpells(allSpells);
+/*showDisplaySpells(allSpells);*/
 
 let spellsOption = document.getElementById("spellsId")
 spellsOption.addEventListener("click", function (event) {
@@ -87,18 +87,20 @@ spellsOption.addEventListener("click", function (event) {
   }
 });
 
-let sortAtoZOption = document.getElementById("fromAtoZ")
+let sortAtoZOption = document.getElementById("sortId")
 sortAtoZOption.addEventListener("click", function (event) {
+  console.log(event.target.value);
   if(event.target.value=== "Order"){
     showDisplayInfo(allCharacters);  
-  }else if(event.target.value=== "A - Z"){
+  }else if(event.target.value=== "fromAtoZ"){
+    console.log("fromAtoZ");
     showDisplayInfo(sortAtoZFunction(allCharacters));
-
-  /*}else if(event.target.value=== "Z - A"){
+}
+ /* }else if(event.target.value=== "fromZtoA"){
     showDisplayInfo(sortZtoAFunction(allCharacters));
 
   }*/
-}});
+});
 
 /*let sortZtoAOption = document.getElementById("fromZtoA")
 sortZtoAOption.addEventListener("click", function (event) {
