@@ -22,9 +22,10 @@ h1 {
     font-size: 2.5em;
     text-align: center;
 }
-h2 {
+header h2 {
     font-family: 'MedievalSharp';
     color: #B78E25;
+    float: right;
 }
 
 

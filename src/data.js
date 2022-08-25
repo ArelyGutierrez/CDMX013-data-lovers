@@ -1,4 +1,3 @@
-
 export const filterHousesFunction = (casa, allCharacters) => {
   let filteredHouse= allCharacters.filter(character => character.house === casa )
 //console.log(filteredHouse)
@@ -14,7 +13,7 @@ export const filterSpellsFunction = (hechizo, allSpells) => {
 //console.log(gryffindorFilter)
   return filteredSpells;
 };
-
+ 
 export const sortAtoZFunction = function ( allCharacters ) {
   return allCharacters.sort(function (a, b) {
     if (a.name > b.name) {

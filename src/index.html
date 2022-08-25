@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
@@ -9,28 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
-
+ 
 <body>
   <div id="root"></div>
-
-
+ 
+ 
   <header class="header2">
     <section>
       <div class="logo"><img src="./images//hogwarts_png_by_edicionesmg_d74huma-fullview.png"></div>
       <h1>Hogwarts School of Witchcraft and Wizardry </h1>
     </section>
-
+ 
     <section>
       <nav class="Menu">
-
+ 
         <ul>
-
+ 
           <li><select id="genderId" name="select" class="botones">
               <option id="Students" value="Students" selected>Characters</option>
               <option id="Female" value="Female">Female</option>
               <option id="Male" value="Male">Male</option>
             </select></li>
-
+ 
           <li><select id="casaId" name="select" class="botones">
               <option id=" " value="houses" selected>Houses</option>
               <option id="Gryffindor" value="Gryffindor">Gryffindor</option>
@@ -39,17 +39,17 @@
               <option id="Slytherin" value="Slytherin">Slytherin</option>
               <option id="Unknown" value="Unknown">Unknown</option>
             </select></li>
-
+ 
           <li><select id="sortId" name="select" class="botones">
               <option id="Order" value="Order" selected>Order</option>
               <option id="fromAtoZ" value="fromAtoZ">A - Z</option>
               <option id="fromZtoA" value="fromZtoA">Z - A</option>
             </select></li>
-
+ 
         </ul>
-
+ 
         <ul id="SpellTypes">
-
+ 
           <li><select id="spellsId" name="select" class="botones">
               <option value="Spells Types" selected>Spell Types</option>
               <option id="Charm" value="Charm">Charm</option>
@@ -68,23 +68,23 @@
               <option id="Untransfiguration" value="Untransfiguration">Untransfiguration</option>
               <option id="Vanishment" value="Vanishment">Vanishment</option>
             </select></li>
-            <!-- <h2>Search <input type="text" id="formulario" class="form-control my-2" placeholder="Escribe aquí el nombre de tu hechizo"> <button class="btn btn-info mb-2" id="boton">Buscar</button></h2> -->
-            <h2>Search <input type="text" id="formulario" class="form-control my-2" placeholder="Escribe aquí el nombre de tu hechizo"> </h2>
         </ul>
       </nav>
+<!-- <h2>Search <input type="text" id="formulario" class="form-control my-2" placeholder="Escribe aquí el nombre de tu hechizo"> <button class="btn btn-info mb-2" id="boton">Buscar</button></h2> -->
+<h2>Search <input type="text" id="formulario" class="form-control my-2" placeholder="Escribe aquí..."> <button class="btn btn-info mb-2" id="boton">Buscar</button></h2>
 <!--       <div class="container mt-5">
         <h2>Buscador <input type="text" id="formulario" class="form-control my-2" placeholder="Escribe aquí el nombre de tu hechizo"> <button class="btn btn-info mb-2" id="boton">Buscar</button></h2>
       </div> -->
     </section>
   </header>
-
+ 
   <main>
-
+ 
     <div id="showCharacter">
     </div>
 <!--     <div id="showSpells">
     </div> -->
-
+ 
   </main>
   <footer id="footer">
     <img id="imgFooter1" src="./images/LENTES.png" alt="Harry Potter">
@@ -93,5 +93,5 @@
   </footer>
   <script src="main.js" type="module"></script>
 </body>
-
+ 
 </html>

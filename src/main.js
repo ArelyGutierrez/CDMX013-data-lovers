@@ -3,9 +3,9 @@ import { filterGenderFunction } from './data.js';
 import { filterSpellsFunction } from './data.js';
 import { sortAtoZFunction } from './data.js';
 import { sortZtoAFunction } from './data.js';
-
+ 
 import datos from "./data/harrypotter/harrypotterdata.js";
-
+ 
 /*window.addEventListener("scroll", function() {
   var header = this.document.querySelector("header");
   header.classList.toggle("abajo",window.scrollY>0);
@@ -13,7 +13,7 @@ import datos from "./data/harrypotter/harrypotterdata.js";
 const allSpells = datos.spells;
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
-
+ 
   //*let newDiv = document.createElement("div")*/
   let characters = `<button id="${character.id}" class="charactersStyle">
             <p ><strong>${character.name}</strong></p>
@@ -26,9 +26,9 @@ const generadorHTML = (character) => {
             `;
   return characters;
 };
-
+ 
 function showDisplayInfo(arr) {
-
+ 
   ///////muestra personajes en pantalla
   let todoelHTML = "";
   arr.forEach((oneCharacter) => (todoelHTML += generadorHTML(oneCharacter)));
@@ -36,7 +36,7 @@ function showDisplayInfo(arr) {
   ////////////////////////////////////////////////////////////////
 }
 showDisplayInfo(allCharacters);
-
+ 
 let houseOption = document.getElementById("casaId")
 houseOption.addEventListener("click", function (event) {
   if (event.target.value === "houses") {
@@ -45,7 +45,7 @@ houseOption.addEventListener("click", function (event) {
     showDisplayInfo(filterHousesFunction(event.target.value, allCharacters));
   }
 });
-
+ 
 let genderOption = document.getElementById("genderId")
 genderOption.addEventListener("click", function (event) {
   if (event.target.value === "Students") {
@@ -54,9 +54,9 @@ genderOption.addEventListener("click", function (event) {
     showDisplayInfo(filterGenderFunction(event.target.value, allCharacters));
   }
 });
-
+ 
 const generadorHTMLSpells = (spells) => {
-
+ 
   //*let newDiv = document.createElement("div")*/
   let oneSpell = `<button id="${spells.id}" class="charactersStyle">
             <p ><strong>${spells.name}</strong></p>
@@ -68,7 +68,7 @@ const generadorHTMLSpells = (spells) => {
             `;
   return oneSpell;
 };
-
+ 
 function showDisplaySpells(arr) {
   ///////muestra personajes en pantalla
   let todoelHTML = "";
@@ -77,7 +77,7 @@ function showDisplaySpells(arr) {
   ////////////////////////////////////////////////////////////////
 }
 /*showDisplaySpells(allSpells);*/
-
+ 
 let spellsOption = document.getElementById("spellsId")
 spellsOption.addEventListener("click", function (event) {
   if (event.target.value === "Spells Types") {
@@ -86,7 +86,7 @@ spellsOption.addEventListener("click", function (event) {
     showDisplaySpells(filterSpellsFunction(event.target.value, allSpells));
   }
 });
-
+ 
 let sortAtoZOption = document.getElementById("sortId")
 sortAtoZOption.addEventListener("click", function (event) {
   /* //console.log(event.target.value); */
@@ -98,38 +98,37 @@ sortAtoZOption.addEventListener("click", function (event) {
     showDisplayInfo(sortZtoAFunction(allCharacters));
   }
 });
-
+ 
 const formulario = document.querySelector('#formulario');
-//const boton = document.querySelector('#boton');
+const boton = document.querySelector('#boton');
 const resultado = document.querySelector('#showCharacter');
-
+ 
 const filtrar = () => {
   //console.log(formulario.value);
   resultado.innerHTML = '';
   const texto = formulario.value.toLowerCase();
   for (let spells of allSpells) {
     let spellName = spells.name.toLowerCase();
-    if (spellName.indexOf(texto) !== -1) { 
-      resultado.innerHTML +=  generadorHTMLSpells(spells); 
+    if (spellName.indexOf(texto) !== -1) {
+      resultado.innerHTML +=  generadorHTMLSpells(spells);
     }
   }
   for (let character of allCharacters) {
     let characterName = character.name.toLowerCase();
-    if (characterName.indexOf(texto) !== -1) { 
-      resultado.innerHTML +=  generadorHTML(character); 
+    if (characterName.indexOf(texto) !== -1) {
+      resultado.innerHTML +=  generadorHTML(character);
     }
   }
 /*   for (let casa of allCharacters) {
     let characterName = casa.house.toLowerCase();
-    if (characterName.indexOf(texto) !== -1) { 
-      resultado.innerHTML +=  generadorHTML(casa); 
+    if (characterName.indexOf(texto) !== -1) {
+      resultado.innerHTML +=  generadorHTML(casa);
     }
   } */
   if(resultado.innerHTML === ''){
     resultado.innerHTML += `  <h2> No hay coincidencias 😕</h2>`
   }
 }
-//boton.addEventListener('click', filtrar)
-formulario.addEventListener('keyup', filtrar);
+boton.addEventListener('click', filtrar)
+//formulario.addEventListener('keyup', filtrar);
 //filtrar();
-
