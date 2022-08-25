@@ -1,5 +1,5 @@
 body {
-    background-color: #0A0A0A;
+    background-color: black;
 }
 
 header {
@@ -22,6 +22,12 @@ h1 {
     font-size: 2.5em;
     text-align: center;
 }
+header h2 {
+    font-family: 'MedievalSharp';
+    color: #B78E25;
+    float: right;
+}
+
 
 img {
     /*display:flex;*/
@@ -32,7 +38,7 @@ img {
 }
 
 nav {
-    background-color: #0a0a0a75;
+    background-color: black;
     border-bottom-style: solid;
     border-bottom-width: thick;
     border-bottom-color: #B78E25;
@@ -126,7 +132,7 @@ main {
 .charactersStyle:hover {
     background-color: #b78e25da;
     transform: scale(1.2);
-    text-shadow: #0A0A0A; 
+    text-shadow:black; 
     position:relative;
     top: -51px;
     padding: 10px 15px;
