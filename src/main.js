@@ -2,7 +2,7 @@ import { filterHousesFunction } from './data.js'; //import { example } from './d
 import { filterGenderFunction } from './data.js';
 import { filterSpellsFunction } from './data.js';
 import { sortAtoZFunction } from './data.js';
-import {sortZtoAFunction} from './data.js';
+import { sortZtoAFunction } from './data.js';
 
 import datos from "./data/harrypotter/harrypotterdata.js";
 
@@ -42,16 +42,16 @@ houseOption.addEventListener("click", function (event) {
   if (event.target.value === "houses") {
     showDisplayInfo(allCharacters);
   } else {
-    showDisplayInfo(filterHousesFunction(event.target.value));
+    showDisplayInfo(filterHousesFunction(event.target.value, allCharacters));
   }
 });
 
 let genderOption = document.getElementById("genderId")
 genderOption.addEventListener("click", function (event) {
-  if (event.target.value === "Students"){
+  if (event.target.value === "Students") {
     showDisplayInfo(allCharacters);
   } else {
-    showDisplayInfo(filterGenderFunction(event.target.value));
+    showDisplayInfo(filterGenderFunction(event.target.value, allCharacters));
   }
 });
 
@@ -80,29 +80,56 @@ function showDisplaySpells(arr) {
 
 let spellsOption = document.getElementById("spellsId")
 spellsOption.addEventListener("click", function (event) {
-  if(event.target.value=== "Spells Types"){
-    showDisplaySpells(allSpells);  
-  }else{
-    showDisplaySpells(filterSpellsFunction(event.target.value));
+  if (event.target.value === "Spells Types") {
+    showDisplaySpells(allSpells);
+  } else {
+    showDisplaySpells(filterSpellsFunction(event.target.value, allSpells));
   }
 });
 
 let sortAtoZOption = document.getElementById("sortId")
 sortAtoZOption.addEventListener("click", function (event) {
-  console.log(event.target.value);
-  if(event.target.value=== "Order"){
-    showDisplayInfo(allCharacters);  
-  }else if(event.target.value=== "fromAtoZ"){
-    console.log("fromAtoZ");
+  /* //console.log(event.target.value); */
+  if (event.target.value === "Order") {
+    showDisplayInfo(allCharacters);
+  } else if (event.target.value === "fromAtoZ") {
     showDisplayInfo(sortAtoZFunction(allCharacters));
-  }else if(event.target.value=== "fromZtoA"){
+  } else if (event.target.value === "fromZtoA") {
     showDisplayInfo(sortZtoAFunction(allCharacters));
-
   }
 });
 
-/*let sortZtoAOption = document.getElementById("fromZtoA")
-sortZtoAOption.addEventListener("click", function (event) {
-  showDisplayInfo(sortZtoAFunction(event.target.value)) 
-  console.log(sortZtoAOption())
-});*/
+const formulario = document.querySelector('#formulario');
+//const boton = document.querySelector('#boton');
+const resultado = document.querySelector('#showCharacter');
+
+const filtrar = () => {
+  //console.log(formulario.value);
+  resultado.innerHTML = '';
+  const texto = formulario.value.toLowerCase();
+  for (let spells of allSpells) {
+    let spellName = spells.name.toLowerCase();
+    if (spellName.indexOf(texto) !== -1) { 
+      resultado.innerHTML +=  generadorHTMLSpells(spells); 
+    }
+  }
+  for (let character of allCharacters) {
+    let characterName = character.name.toLowerCase();
+    if (characterName.indexOf(texto) !== -1) { 
+      resultado.innerHTML +=  generadorHTML(character); 
+    }
+  }
+/*   for (let casa of allCharacters) {
+    let characterName = casa.house.toLowerCase();
+    if (characterName.indexOf(texto) !== -1) { 
+      resultado.innerHTML +=  generadorHTML(casa); 
+    }
+  } */
+  if(resultado.innerHTML === ''){
+    resultado.innerHTML += `  <h2> No hay coincidencias 😕</h2>`
+  }
+}
+//boton.addEventListener('click', filtrar)
+formulario.addEventListener('keyup', filtrar);
+//filtrar();
+
