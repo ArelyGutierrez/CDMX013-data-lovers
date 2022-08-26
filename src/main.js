@@ -13,7 +13,7 @@ import datos from "./data/harrypotter/harrypotterdata.js";
 const allSpells = datos.spells;
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
- 
+  //let contador=0;
   //*let newDiv = document.createElement("div")*/
   let characters = `<button id="${character.id}" class="charactersStyle">
             <p ><strong>${character.name}</strong></p>
@@ -24,6 +24,8 @@ const generadorHTML = (character) => {
             </div>
             </button>
             `;
+            //contador += 1;
+            //console.log(contador) 
   return characters;
 };
  
@@ -56,7 +58,7 @@ genderOption.addEventListener("click", function (event) {
 });
  
 const generadorHTMLSpells = (spells) => {
- 
+  let contadorS = 0;
   //*let newDiv = document.createElement("div")*/
   let oneSpell = `<button id="${spells.id}" class="charactersStyle">
             <p ><strong>${spells.name}</strong></p>
@@ -66,6 +68,8 @@ const generadorHTMLSpells = (spells) => {
             </div>
             </button>
             `;
+            contadorS+=1;
+            //console.log(contadorS);
   return oneSpell;
 };
  
@@ -119,14 +123,9 @@ const filtrar = () => {
       resultado.innerHTML +=  generadorHTML(character);
     }
   }
-/*   for (let casa of allCharacters) {
-    let characterName = casa.house.toLowerCase();
-    if (characterName.indexOf(texto) !== -1) {
-      resultado.innerHTML +=  generadorHTML(casa);
-    }
-  } */
   if(resultado.innerHTML === ''){
     resultado.innerHTML += `  <h2> No hay coincidencias 😕</h2>`
+    
   }
 }
 boton.addEventListener('click', filtrar)
