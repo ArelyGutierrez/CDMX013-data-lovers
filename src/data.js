@@ -5,7 +5,7 @@ export const filterHousesFunction = (casa, allCharacters) => {
 };
 export const filterGenderFunction = (genero, allCharacters) => {
   let filteredGender= allCharacters.filter(character => character.gender === genero )
-//console.log(gryffindorFilter)
+//console.log(filterGenderFunction.length);
   return filteredGender;
 };
 export const filterSpellsFunction = (hechizo, allSpells) => {
