@@ -47,14 +47,14 @@ describe('filterSpellsFunction', () => {
   });
 
   it('returns Spell Array from Spells', () => {
-    let filteredSpells = filterSpellsFunction("Curse",datos.spells)
-    expect(filterSpellsFunction("Curse",datos.spells)).toStrictEqual(filteredSpells);
+    let result = filterSpellsFunction("Curse",datos.spells)
+    expect(filterSpellsFunction("Curse",datos.spells)).toStrictEqual({filteredSpells:result.filteredSpells, spellStadistics:result.spellStadistics});
   });
 
   it('returns  array length from Spells', () => {
-    expect(filterSpellsFunction("Hex", datos.spells)).toHaveLength(21);
-    expect(filterSpellsFunction("Dark charm", datos.spells)).toHaveLength(1);
-    expect(filterSpellsFunction("Spell", datos.spells)).toHaveLength(10);
+    expect(filterSpellsFunction("Hex", datos.spells).filteredSpells).toHaveLength(21);
+    expect(filterSpellsFunction("Dark charm", datos.spells).filteredSpells).toHaveLength(1);
+    expect(filterSpellsFunction("Spell", datos.spells).filteredSpells).toHaveLength(10);
   });
   // Esto es especialmente útil para comprobar el tamaño de matrices o cadenas.
 });
@@ -65,15 +65,11 @@ describe('sortAtoZFunction', () => {
   });
 
   it('returns Spell Array from Spells', () => {
-    let filteredSpells = filterSpellsFunction("Curse",datos.spells)
-    expect(filterSpellsFunction("Curse",datos.spells)).toStrictEqual(filteredSpells);
+    let data =  [{name:"Sharon"}, {name:"Arely"},{name:"Katya"}]
+    let resultDataOrdenada = [{name:"Arely"},{name:"Katya"},{name:"Sharon"}]
+    expect(sortAtoZFunction(data)).toEqual(resultDataOrdenada);
   });
 
-  it('returns  array length from Spells', () => {
-    expect(filterSpellsFunction("Hex", datos.spells)).toHaveLength(21);
-    expect(filterSpellsFunction("Dark charm", datos.spells)).toHaveLength(1);
-    expect(filterSpellsFunction("Spell", datos.spells)).toHaveLength(10);
-  });
   // Esto es especialmente útil para comprobar el tamaño de matrices o cadenas.
 });
 //fitrado por buscador 
