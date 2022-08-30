@@ -28,11 +28,11 @@ header h2 {
     float: right;
 }
 
-img {
+header img {
     /*display:flex;*/
     max-width: 25%;
-    width: 8em;
-    height: 8em;
+    width: 7em;
+    height: 7em;
     float: left;
 }
 
@@ -105,8 +105,17 @@ main {
     /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
 
+button img {
+    /*display:flex;*/
+    /* max-width: 25%; */
+    width: 5em;
+    height: 5em;
+    /*content: normal;*/
+    float:inline-start;
+}
+
 .charactersStyle {
-    display: inline-grid;
+    /* display: inline-grid; */
     flex-direction: row;
     flex-wrap: wrap;
     position: static;
@@ -118,11 +127,11 @@ main {
     margin: 1%;
     width: 15em;
     /*10*/
-    height: 8em;
+    height: 13em;
     /*3em*/
     align-self: stretch;
     justify-content: stretch;
-    text-align: center;
+    text-align:center;
     font-family: Helvetica, sans-serif, Arial;
     /*'MedievalSharp';*/
     letter-spacing: .2em;
@@ -142,7 +151,7 @@ main {
     top: -51px;
     padding: 10px 15px;
     text-align: center;
-    height: 16em
+    height: 22em;
 }
 
 .charactersStyle:hover #extraInfo {
