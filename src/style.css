@@ -4,7 +4,7 @@ body {
 
 header {
     /*position:fixed;*/
-    size: 150px;
+    size: 25wh;
     /*padding: 15px 20px;*/
     margin-bottom: 20px;
     width: 100%;
@@ -27,7 +27,6 @@ header h2 {
     color: #B78E25;
     float: right;
 }
-
 
 img {
     /*display:flex;*/
@@ -56,6 +55,12 @@ ul {
     /*quita las viñetas*/
     list-style-type: none;
     justify-content: space-between;
+}
+main h2 {
+    font-family: 'MedievalSharp';
+    color: #B78E25;
+    text-align: center;
+    background-color: blanchedalmond;
 }
 
 #SpellTypes{

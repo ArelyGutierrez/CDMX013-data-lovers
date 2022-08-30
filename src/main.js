@@ -75,9 +75,9 @@ const generadorHTMLSpells = (spells) => {
 
 
 
-function showDisplaySpells(resultSpells, spellValue) {
-  const {filteredSpells, spellStadistics} = resultSpells //estrayendo datos de un objeto
-  console.log(resultSpells, spellValue);
+function showDisplaySpells(resultSpells, spellValue) { //esta función se ejecuta al selecciona un tipo de spell especifico
+  const {filteredSpells, spellStadistics} = resultSpells //extrayendo datos de un objeto
+ // console.log(resultSpells, spellValue);
  
   let todoelHTML = "";
   document.getElementById("showCalculus").innerHTML= spellStadistics + "% of spells are " + spellValue + " type";
@@ -87,7 +87,7 @@ function showDisplaySpells(resultSpells, spellValue) {
   ////////////////////////////////////////////////////////////////
 }
 
-function showDisplayInfoSpells(arr) {
+function showDisplayInfoAllSpells(arr) { //esta funcion se ejecuta cuando seleccionamos spell_types
   ///////muestra personajes en pantalla
   let todoelHTML = "";
   document.getElementById("showCalculus").innerHTML= "";
@@ -95,10 +95,10 @@ function showDisplayInfoSpells(arr) {
   document.getElementById("showCharacter").innerHTML = todoelHTML;
 }
 
-let spellsOption = document.getElementById("spellsId")
+let spellsOption = document.getElementById("spellsId") 
 spellsOption.addEventListener("click", function (event) {
   if (event.target.value === "Spells Types") {
-    showDisplayInfoSpells(allSpells);
+    showDisplayInfoAllSpells(allSpells);
   } else {
     const resultSpells = filterSpellsFunction(event.target.value, allSpells)
     showDisplaySpells(resultSpells, event.target.value);

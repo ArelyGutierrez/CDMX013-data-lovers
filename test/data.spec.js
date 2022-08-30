@@ -1,4 +1,4 @@
-import { filterHousesFunction, filterGenderFunction, filterSpellsFunction, sortAtoZFunction } from '../src/data.js';
+import { filterHousesFunction, filterGenderFunction, filterSpellsFunction, sortAtoZFunction, sortZtoAFunction } from '../src/data.js';
 import datos from "./data.js";
 
 describe('filterHousesFunction', () => {
@@ -58,20 +58,50 @@ describe('filterSpellsFunction', () => {
   });
   // Esto es especialmente útil para comprobar el tamaño de matrices o cadenas.
 });
-///////////////////////////////
+/////////de A a Z
 describe('sortAtoZFunction', () => {
   it('is a function', () => {
     expect(typeof sortAtoZFunction).toBe('function');
   });
 
-  it('returns Spell Array from Spells', () => {
+  it('Compare test of SortAtoZ ', () => {
     let data =  [{name:"Sharon"}, {name:"Arely"},{name:"Katya"}]
     let resultDataOrdenada = [{name:"Arely"},{name:"Katya"},{name:"Sharon"}]
+    let resultFail = [{name:"Katya"},{name:"Arely"},{name:"Sharon"}]
     expect(sortAtoZFunction(data)).toEqual(resultDataOrdenada);
+    expect(sortAtoZFunction(data)).not.toEqual(resultFail);
   });
 
-  // Esto es especialmente útil para comprobar el tamaño de matrices o cadenas.
+  it('compare test of sortAtoZ with two equal objects', ()=>{
+    let data =  [{name:"Sharon"}, {name:"Arely"},{name:"Katya"},{name:"Katya"}]
+    let resultDataOrdenada = [{name:"Arely"},{name:"Katya"},{name:"Katya"},{name:"Sharon"}]
+    expect(sortAtoZFunction(data)).toEqual(resultDataOrdenada)
+  })
+ 
 });
+/////////// de Z a A
+describe('sortZtoAFunction', () => {
+  it('is a function', () => {
+    expect(typeof sortZtoAFunction).toBe('function');
+  });
+
+  it('Compare test of SortZtoA ', () => {
+    let data =  [{name:"Sharon"}, {name:"Arely"},{name:"Katya"}]
+    let resultDataOrdenada = [{name:"Sharon"},{name:"Katya"},{name:"Arely"}]
+    let resultFail = [{name:"Katya"},{name:"Arely"},{name:"Sharon"}]
+    expect(sortZtoAFunction(data)).toEqual(resultDataOrdenada);
+    expect(sortZtoAFunction(data)).not.toEqual(resultFail);
+  });
+
+  it('compare test of sortZtoA with two equal objects', ()=>{
+    let data =  [{name:"Sharon"}, {name:"Arely"},{name:"Katya"},{name:"Katya"}]
+    let resultDataOrdenada = [{name:"Sharon"},{name:"Katya"},{name:"Katya"},{name:"Arely"}]
+    expect(sortZtoAFunction(data)).toEqual(resultDataOrdenada)
+  })
+ 
+});
+
+
 //fitrado por buscador 
 //que pasa si no se introduce input 
 
