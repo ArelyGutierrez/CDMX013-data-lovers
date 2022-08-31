@@ -1,31 +1,27 @@
-import { filterHousesFunction } from './data.js'; //import { example } from './data.js';
-import { filterGenderFunction } from './data.js';
-import { filterSpellsFunction } from './data.js';
-import { sortAtoZFunction } from './data.js';
-import { sortZtoAFunction } from './data.js';
-
+import { filterHousesFunction, filterGenderFunction, filterSpellsFunction, sortAtoZFunction, sortZtoAFunction } from './data.js'; //import { example } from './data.js';
 import datos from "./data/harrypotter/harrypotterdata.js";
 
-/*window.addEventListener("scroll", function() {
-  var header = this.document.querySelector("header");
-  header.classList.toggle("abajo",window.scrollY>0);
-  })*/
 const allSpells = datos.spells;
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
-  if (character.gender == "Male") {
-    let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/magician.png" alt="Male" class="avatar"></img><p ><strong>${character.name}</strong></p>
+
+  if (character.house == "Gryffindor") {
+
+    if (character.gender == "Male") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
+    <img src="/images/magician.png" alt="Male" class="avatar"></img>
+    <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
     <p>Species: ${character.species}</p>
     <p>House:${character.house}</p>
     </div>
     </button> `;
-
-    return characters;
-  } else if (character.gender == "Female") {
-    let characters = `<button id="${character.id}" class="charactersStyle">
+      return characters;
+    } else if (character.gender == "Female") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
     <img src="/images/witch.png" alt="Female" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
@@ -34,10 +30,10 @@ const generadorHTML = (character) => {
     <p>House:${character.house}</p>
     </div>
     </button> `;
-
-    return characters;
-  } else {
-    let characters = `<button id="${character.id}" class="charactersStyle">
+      return characters;
+    } else {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
     <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
@@ -46,10 +42,158 @@ const generadorHTML = (character) => {
     <p>House:${character.house}</p>
     </div>
     </button> `;
-
-    return characters;
+      return characters;
+    }
+  } else if (character.house == "Hufflepuff") {
+    if (character.gender == "Male") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else if (character.gender == "Female") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    }
+  } else if (character.house == "Ravenclaw") {
+    if (character.gender == "Male") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else if (character.gender == "Female") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    }
+  } else if (character.house == "Slytherin") {
+    if (character.gender == "Male") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else if (character.gender == "Female") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    }
+  } else {
+    if (character.gender == "Male") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <p ><strong>${character.name}</strong></p>
+      <div id="extraInfo">
+      <p>Birth: ${character.birth}</p>
+      <p>Species: ${character.species}</p>
+      <p>House:${character.house}</p>
+      </div>
+      </button> `;
+      return characters;
+    } else if (character.gender == "Female") {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/witch.png" alt="Female" class="avatar"></img>
+    <p ><strong>${character.name}</strong></p>
+    <div id="extraInfo">
+    <p>Birth: ${character.birth}</p>
+    <p>Species: ${character.species}</p>
+    <p>House:${character.house}</p>
+    </div>
+    </button> `;
+      return characters;
+    } else {
+      let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+    <p ><strong>${character.name}</strong></p>
+    <div id="extraInfo">
+    <p>Birth: ${character.birth}</p>
+    <p>Species: ${character.species}</p>
+    <p>House:${character.house}</p>
+    </div>
+    </button> `;
+      return characters;
+    }
   }
-
 };
 
 function showDisplayInfo(arr) {

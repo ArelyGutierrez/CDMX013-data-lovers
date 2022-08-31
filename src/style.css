@@ -104,14 +104,23 @@ main {
     background-attachment: fixed;
     /* con esto logramos que el gif se fije, sin esto se duplicaban varios gif*/
 }
+button .escudo {
+    /*display:flex;*/
+    /* max-width: 25%; */
+    width: 2.2em;
+    height: 2.2em;
+    /*content: normal;*/
+    float:right;
+}
 
-button img {
+button .avatar {
     /*display:flex;*/
     /* max-width: 25%; */
     width: 5em;
     height: 5em;
     /*content: normal;*/
-    float:inline-start;
+     /* float:inline-start;  */
+     float:none;
 }
 
 .charactersStyle {
