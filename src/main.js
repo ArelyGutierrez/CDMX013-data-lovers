@@ -9,8 +9,8 @@ const generadorHTML = (character) => {
 
     if (character.gender == "Male") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
-    <img src="/images/magician.png" alt="Male" class="avatar"></img>
+    <img src="./images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
+    <img src="./images/magician.png" alt="Male" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
@@ -21,8 +21,8 @@ const generadorHTML = (character) => {
       return characters;
     } else if (character.gender == "Female") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
-    <img src="/images/witch.png" alt="Female" class="avatar"></img>
+    <img src="./images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
+    <img src="./images/witch.png" alt="Female" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
@@ -33,8 +33,8 @@ const generadorHTML = (character) => {
       return characters;
     } else {
       let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
-    <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+    <img src="./images/Gryffindor.png" alt="GryffindorL" class="escudo"></img>
+    <img src="./images/magician-svg.png" alt="Unknown" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
@@ -47,8 +47,8 @@ const generadorHTML = (character) => {
   } else if (character.house == "Hufflepuff") {
     if (character.gender == "Male") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
-      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <img src="./images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="./images/magician.png" alt="Male" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -59,8 +59,8 @@ const generadorHTML = (character) => {
       return characters;
     } else if (character.gender == "Female") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
-      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <img src="./images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="./images/witch.png" alt="Female" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -71,8 +71,8 @@ const generadorHTML = (character) => {
       return characters;
     } else {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
-      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <img src="./images/Hufflepuff.png" alt="HufflepuffL" class="escudo"></img>
+      <img src="./images/magician-svg.png" alt="Unknown" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -85,8 +85,8 @@ const generadorHTML = (character) => {
   } else if (character.house == "Ravenclaw") {
     if (character.gender == "Male") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
-      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <img src="./images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="./images/magician.png" alt="Male" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -97,8 +97,8 @@ const generadorHTML = (character) => {
       return characters;
     } else if (character.gender == "Female") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
-      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <img src="./images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="./images/witch.png" alt="Female" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -109,8 +109,8 @@ const generadorHTML = (character) => {
       return characters;
     } else {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
-      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <img src="./images/Ravenclaw.png" alt="RavenclawL" class="escudo"></img>
+      <img src="./images/magician-svg.png" alt="Unknown" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -123,8 +123,8 @@ const generadorHTML = (character) => {
   } else if (character.house == "Slytherin") {
     if (character.gender == "Male") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
-      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <img src="./images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="./images/magician.png" alt="Male" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -135,8 +135,8 @@ const generadorHTML = (character) => {
       return characters;
     } else if (character.gender == "Female") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
-      <img src="/images/witch.png" alt="Female" class="avatar"></img>
+      <img src="./images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="./images/witch.png" alt="Female" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -147,8 +147,8 @@ const generadorHTML = (character) => {
       return characters;
     } else {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
-      <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+      <img src="./images/Slytherin.png" alt="SlytherinL" class="escudo"></img>
+      <img src="./images/magician-svg.png" alt="Unknown" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -161,7 +161,7 @@ const generadorHTML = (character) => {
   } else {
     if (character.gender == "Male") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-      <img src="/images/magician.png" alt="Male" class="avatar"></img>
+      <img src="./images/magician.png" alt="Male" class="avatar"></img>
       <p ><strong>${character.name}</strong></p>
       <div id="extraInfo">
       <p>Birth: ${character.birth}</p>
@@ -172,7 +172,7 @@ const generadorHTML = (character) => {
       return characters;
     } else if (character.gender == "Female") {
       let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/witch.png" alt="Female" class="avatar"></img>
+    <img src="./images/witch.png" alt="Female" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
@@ -183,7 +183,7 @@ const generadorHTML = (character) => {
       return characters;
     } else {
       let characters = `<button id="${character.id}" class="charactersStyle">
-    <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+    <img src="./images/magician-svg.png" alt="Unknown" class="avatar"></img>
     <p ><strong>${character.name}</strong></p>
     <div id="extraInfo">
     <p>Birth: ${character.birth}</p>
@@ -228,7 +228,7 @@ const generadorHTMLSpells = (spells) => {
   // let contadorS = 0;
   //*let newDiv = document.createElement("div")*/
   let oneSpell = `<button id="${spells.id}" class="charactersStyle">
-  <img src="/images/spellbook.png" alt="Female" class="avatar"></img>
+  <img src="./images/spellbook.png" alt="Female" class="avatar"></img>
             <p ><strong>${spells.name}</strong></p>
             <div id="extraInfo">
             <p>Pronuntiation: ${spells.pronunciation}</p>
