@@ -4,11 +4,12 @@ body {
 
 header {
     /*position:fixed;*/
-    size: 25wh;
+    /* size: 10wh; */
     /*padding: 15px 20px;*/
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     width: 100%;
     overflow: hidden; /*para poder desplazar izquierda o derecha algunos elementos y con esto evitamos que halla error*/
+    margin: 0em;
 }
 
 /*.header2{
@@ -19,13 +20,16 @@ h1 {
     /*float: center;*/
     font-family: 'MedievalSharp';
     color: #B78E25;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
+    margin: 0em;
 }
 header h2 {
     font-family: 'MedievalSharp';
     color: #B78E25;
     float: right;
+    margin: 0cm;
+    margin-top: .2em;
 }
 
 header img {
@@ -37,9 +41,9 @@ header img {
 }
 
 nav {
-    background-color: black;
+    /* background-color: black; */
     border-bottom-style: solid;
-    border-bottom-width: thick;
+    border-bottom-width: thick; 
     border-bottom-color: #B78E25;
     /*border-bottom-shadow; */
     box-shadow: 0px 4px 0px 0px #f5f5f5be;
@@ -47,8 +51,9 @@ nav {
     display: flex;
     flex-wrap:wrap;
     /*position: -webkit-sticky;*/
-    margin: 10px 10px 0px 0px;
+    /* margin: 10px 10px 0px 0px; */
     justify-content: center;
+    margin: 0em;
 }
 
 ul {
@@ -79,9 +84,9 @@ select {
     /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
     font-style: normal;
-    font-weight: 1em;
+    /* font-weight: 1em; */
     /*500*/
-    font-size: 1.8em;
+    font-size: 1.5em;
     line-height: 41px;
     text-align: center;
     color: #B78E25;
@@ -145,6 +150,7 @@ button .avatar {
     /*'MedievalSharp';*/
     letter-spacing: .2em;
     align-items: stretch;
+    border-radius: 5%;
 }
 
 .charactersStyle #extraInfo {
