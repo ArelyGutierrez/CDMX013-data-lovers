@@ -13,20 +13,43 @@ import datos from "./data/harrypotter/harrypotterdata.js";
 const allSpells = datos.spells;
 const allCharacters = datos.characters;
 const generadorHTML = (character) => {
-  //let contador=0;
-  //*let newDiv = document.createElement("div")*/
-  let characters = `<button id="${character.id}" class="charactersStyle">
-            <p ><strong>${character.name}</strong></p>
-            <div id="extraInfo">
-            <p>Birth: ${character.birth}</p>
-            <p>Species: ${character.species}</p>
-            <p>House:${character.house}</p>
-            </div>
-            </button>
-            `;
-  //contador += 1;
-  //console.log(contador) 
-  return characters;
+  if (character.gender == "Male") {
+    let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/magician.png" alt="Male" class="avatar"></img><p ><strong>${character.name}</strong></p>
+    <div id="extraInfo">
+    <p>Birth: ${character.birth}</p>
+    <p>Species: ${character.species}</p>
+    <p>House:${character.house}</p>
+    </div>
+    </button> `;
+
+    return characters;
+  } else if (character.gender == "Female") {
+    let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/witch.png" alt="Female" class="avatar"></img>
+    <p ><strong>${character.name}</strong></p>
+    <div id="extraInfo">
+    <p>Birth: ${character.birth}</p>
+    <p>Species: ${character.species}</p>
+    <p>House:${character.house}</p>
+    </div>
+    </button> `;
+
+    return characters;
+  } else {
+    let characters = `<button id="${character.id}" class="charactersStyle">
+    <img src="/images/magician-svg.png" alt="Unknown" class="avatar"></img>
+    <p ><strong>${character.name}</strong></p>
+    <div id="extraInfo">
+    <p>Birth: ${character.birth}</p>
+    <p>Species: ${character.species}</p>
+    <p>House:${character.house}</p>
+    </div>
+    </button> `;
+
+    return characters;
+  }
+
 };
 
 function showDisplayInfo(arr) {
@@ -58,9 +81,10 @@ genderOption.addEventListener("click", function (event) {
 });
 
 const generadorHTMLSpells = (spells) => {
- // let contadorS = 0;
+  // let contadorS = 0;
   //*let newDiv = document.createElement("div")*/
   let oneSpell = `<button id="${spells.id}" class="charactersStyle">
+  <img src="/images/spellbook.png" alt="Female" class="avatar"></img>
             <p ><strong>${spells.name}</strong></p>
             <div id="extraInfo">
             <p>Pronuntiation: ${spells.pronunciation}</p>
@@ -76,11 +100,11 @@ const generadorHTMLSpells = (spells) => {
 
 
 function showDisplaySpells(resultSpells, spellValue) { //esta función se ejecuta al selecciona un tipo de spell especifico
-  const {filteredSpells, spellStadistics} = resultSpells //extrayendo datos de un objeto
- // console.log(resultSpells, spellValue);
- 
+  const { filteredSpells, spellStadistics } = resultSpells //extrayendo datos de un objeto
+  // console.log(resultSpells, spellValue);
+
   let todoelHTML = "";
-  document.getElementById("showCalculus").innerHTML= spellStadistics + "% of spells are " + spellValue + " type";
+  document.getElementById("showCalculus").innerHTML = spellStadistics + "% of spells are " + spellValue + " type";
   ///////muestra personajes en pantalla
   filteredSpells.forEach((oneSpell) => (todoelHTML += generadorHTMLSpells(oneSpell)));
   document.getElementById("showCharacter").innerHTML = todoelHTML;
@@ -90,12 +114,12 @@ function showDisplaySpells(resultSpells, spellValue) { //esta función se ejecut
 function showDisplayInfoAllSpells(arr) { //esta funcion se ejecuta cuando seleccionamos spell_types
   ///////muestra personajes en pantalla
   let todoelHTML = "";
-  document.getElementById("showCalculus").innerHTML= "";
+  document.getElementById("showCalculus").innerHTML = "";
   arr.forEach((oneCharacter) => (todoelHTML += generadorHTMLSpells(oneCharacter)));
   document.getElementById("showCharacter").innerHTML = todoelHTML;
 }
 
-let spellsOption = document.getElementById("spellsId") 
+let spellsOption = document.getElementById("spellsId")
 spellsOption.addEventListener("click", function (event) {
   if (event.target.value === "Spells Types") {
     showDisplayInfoAllSpells(allSpells);
