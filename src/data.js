@@ -9,7 +9,7 @@ export const filterGenderFunction = (genero, allCharacters) => {
 };
 export const filterSpellsFunction = (hechizo, allSpells) => {
   let filteredSpells= allSpells.filter( spells => spells.spell_type === hechizo )
-  let spellStadistics = (filteredSpells.length*100)/allSpells.length;
+  let spellStadistics = ((filteredSpells.length*100)/allSpells.length).toFixed(2);
   //console.log(spellStadistics)
   return {filteredSpells:filteredSpells, spellStadistics:spellStadistics};//key:value
 };
