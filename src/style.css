@@ -1,37 +1,31 @@
 body {
     background-color: black;
+    margin-top: -40px;
 }
-
 header {
-    /*position:fixed;*/
-    /* size: 10wh; */
+    position:fixed;
+    size: 25wh;
+    padding-top: 15px;
     /*padding: 15px 20px;*/
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     width: 100%;
     overflow: hidden; /*para poder desplazar izquierda o derecha algunos elementos y con esto evitamos que halla error*/
-    margin: 0em;
+    background-color: black;
+    /*position: absolute;*/
 }
-
-/*.header2{
-    position:fixed;
-}*/
 h1 {
     flex-wrap: wrap;
     /*float: center;*/
     font-family: 'MedievalSharp';
     color: #B78E25;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
-    margin: 0em;
 }
 header h2 {
     font-family: 'MedievalSharp';
     color: #B78E25;
     float: right;
-    margin: 0cm;
-    margin-top: .2em;
 }
-
 header img {
     /*display:flex;*/
     max-width: 25%;
@@ -39,11 +33,10 @@ header img {
     height: 7em;
     float: left;
 }
-
 nav {
-    /* background-color: black; */
+    background-color: black;
     border-bottom-style: solid;
-    border-bottom-width: thick; 
+    border-bottom-width: thick;
     border-bottom-color: #B78E25;
     /*border-bottom-shadow; */
     box-shadow: 0px 4px 0px 0px #f5f5f5be;
@@ -51,11 +44,9 @@ nav {
     display: flex;
     flex-wrap:wrap;
     /*position: -webkit-sticky;*/
-    /* margin: 10px 10px 0px 0px; */
+    margin: 10px 10px 0px 0px;
     justify-content: center;
-    margin: 0em;
 }
-
 ul {
     /*quita las viñetas*/
     list-style-type: none;
@@ -67,39 +58,35 @@ main h2 {
     text-align: center;
     background-color: blanchedalmond;
 }
-
 #SpellTypes{
     justify-content: right;
 }
-
 li {
     display: inline;
     /*pone en línea opciones en el navegador*/
     text-align: center;
     /*padding: 1em 1em;*/
 }
-
 select {
     text-decoration: none;
     /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
     font-style: normal;
-    /* font-weight: 1em; */
+    font-weight: 1em;
     /*500*/
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: 41px;
     text-align: center;
     color: #B78E25;
     background-color: transparent;
     border-color: transparent;
     /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
-
 }
 option{
     background-color: black;
 }
-
 main {
+    position: inherit;
     margin: 0;
     padding: 0;
     background-image: url(https://th.bing.com/th/id/R.925484d28ec5b35045128a4e647ce03b?rik=qDjf23Mmybk%2bKg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20131030045751%2fharrypotter%2fimages%2f8%2f8e%2fHogwarts_Gif.gif&ehk=7jB%2bjnosZXbU7DsUxdH3nc71Y3UobyGxqOEQZ2DRYHQ%3d&risl=&pid=ImgRaw&r=0);
@@ -117,7 +104,6 @@ button .escudo {
     /*content: normal;*/
     float:right;
 }
-
 button .avatar {
     /*display:flex;*/
     /* max-width: 25%; */
@@ -127,7 +113,6 @@ button .avatar {
      /* float:inline-start;  */
      float:none;
 }
-
 .charactersStyle {
     /* display: inline-grid; */
     flex-direction: row;
@@ -150,34 +135,34 @@ button .avatar {
     /*'MedievalSharp';*/
     letter-spacing: .2em;
     align-items: stretch;
-    border-radius: 5%;
 }
-
 .charactersStyle #extraInfo {
     visibility: hidden;
     transition: 0.3s ease-in-out;
 }
-
 .charactersStyle:hover {
     background-color: #b78e25da;
     transform: scale(1.2);
-    text-shadow:black; 
+    text-shadow:black;
     position:relative;
     top: -51px;
     padding: 10px 15px;
     text-align: center;
     height: 22em;
 }
-
 .charactersStyle:hover #extraInfo {
     visibility: visible;
     /*transition-delay: 0.2s;*/
 }
-
 #showCharacter {
     margin-left: 5%;
+    position: inherit;
+    /*margin-top: 300px;*/
 }
-
+#showCalculus2 {
+    padding-top: 250px;
+    width: 100%;
+}
 footer {
     display: flex;
     justify-content: space-between;
@@ -186,14 +171,12 @@ footer {
     color: white;
     letter-spacing: .2em;
 }
-
 #imgFooter1 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
-
 #imgFooter2 {
     display: flexbox;
     width: 5em;
