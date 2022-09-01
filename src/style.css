@@ -13,6 +13,7 @@ header {
     background-color: black;
     /*position: absolute;*/
 }
+
 h1 {
     flex-wrap: wrap;
     /*float: center;*/
@@ -183,3 +184,4 @@ footer {
     height: 3em;
     justify-content: space-between;
 }
+/*un comentario*/
