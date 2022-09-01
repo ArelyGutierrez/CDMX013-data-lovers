@@ -1,35 +1,32 @@
 body {
     background-color: black;
+    margin-top: -40px;
 }
 
 header {
-    /*position:fixed;*/
-    /* size: 10wh; */
+    position:fixed;
+    size: 25wh;
+    padding-top: 15px;
     /*padding: 15px 20px;*/
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     width: 100%;
     overflow: hidden; /*para poder desplazar izquierda o derecha algunos elementos y con esto evitamos que halla error*/
-    margin: 0em;
+    background-color: black;
+    /*position: absolute;*/
 }
 
-/*.header2{
-    position:fixed;
-}*/
 h1 {
     flex-wrap: wrap;
     /*float: center;*/
     font-family: 'MedievalSharp';
     color: #B78E25;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
-    margin: 0em;
 }
 header h2 {
     font-family: 'MedievalSharp';
     color: #B78E25;
     float: right;
-    margin: 0cm;
-    margin-top: .2em;
 }
 
 header img {
@@ -41,9 +38,9 @@ header img {
 }
 
 nav {
-    /* background-color: black; */
+    background-color: black;
     border-bottom-style: solid;
-    border-bottom-width: thick; 
+    border-bottom-width: thick;
     border-bottom-color: #B78E25;
     /*border-bottom-shadow; */
     box-shadow: 0px 4px 0px 0px #f5f5f5be;
@@ -51,9 +48,8 @@ nav {
     display: flex;
     flex-wrap:wrap;
     /*position: -webkit-sticky;*/
-    /* margin: 10px 10px 0px 0px; */
+    margin: 10px 10px 0px 0px;
     justify-content: center;
-    margin: 0em;
 }
 
 ul {
@@ -84,9 +80,9 @@ select {
     /*quita lo subrayado del link*/
     font-family: 'MedievalSharp';
     font-style: normal;
-    /* font-weight: 1em; */
+    font-weight: 1em;
     /*500*/
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: 41px;
     text-align: center;
     color: #B78E25;
@@ -100,6 +96,7 @@ option{
 }
 
 main {
+    position: inherit;
     margin: 0;
     padding: 0;
     background-image: url(https://th.bing.com/th/id/R.925484d28ec5b35045128a4e647ce03b?rik=qDjf23Mmybk%2bKg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20131030045751%2fharrypotter%2fimages%2f8%2f8e%2fHogwarts_Gif.gif&ehk=7jB%2bjnosZXbU7DsUxdH3nc71Y3UobyGxqOEQZ2DRYHQ%3d&risl=&pid=ImgRaw&r=0);
@@ -150,7 +147,6 @@ button .avatar {
     /*'MedievalSharp';*/
     letter-spacing: .2em;
     align-items: stretch;
-    border-radius: 5%;
 }
 
 .charactersStyle #extraInfo {
@@ -176,8 +172,13 @@ button .avatar {
 
 #showCharacter {
     margin-left: 5%;
+    position: inherit;
+    /*margin-top: 300px;*/
 }
-
+#showCalculus2 {
+    padding-top: 250px;
+    width: 100%;
+}
 footer {
     display: flex;
     justify-content: space-between;
@@ -200,3 +201,4 @@ footer {
     height: 3em;
     justify-content: space-between;
 }
+/*un comentario*/
