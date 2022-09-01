@@ -2,7 +2,6 @@ body {
     background-color: black;
     margin-top: -40px;
 }
-
 header {
     position:fixed;
     size: 25wh;
@@ -28,7 +27,6 @@ header h2 {
     color: #B78E25;
     float: right;
 }
-
 header img {
     /*display:flex;*/
     max-width: 25%;
@@ -36,7 +34,6 @@ header img {
     height: 7em;
     float: left;
 }
-
 nav {
     background-color: black;
     border-bottom-style: solid;
@@ -51,7 +48,6 @@ nav {
     margin: 10px 10px 0px 0px;
     justify-content: center;
 }
-
 ul {
     /*quita las viñetas*/
     list-style-type: none;
@@ -63,18 +59,15 @@ main h2 {
     text-align: center;
     background-color: blanchedalmond;
 }
-
 #SpellTypes{
     justify-content: right;
 }
-
 li {
     display: inline;
     /*pone en línea opciones en el navegador*/
     text-align: center;
     /*padding: 1em 1em;*/
 }
-
 select {
     text-decoration: none;
     /*quita lo subrayado del link*/
@@ -89,12 +82,10 @@ select {
     background-color: transparent;
     border-color: transparent;
     /*text-shadow: 4% 4% 4% 4% rgba(0, 0, 0, 0.25);*/
-
 }
 option{
     background-color: black;
 }
-
 main {
     position: inherit;
     margin: 0;
@@ -114,7 +105,6 @@ button .escudo {
     /*content: normal;*/
     float:right;
 }
-
 button .avatar {
     /*display:flex;*/
     /* max-width: 25%; */
@@ -124,7 +114,6 @@ button .avatar {
      /* float:inline-start;  */
      float:none;
 }
-
 .charactersStyle {
     /* display: inline-grid; */
     flex-direction: row;
@@ -148,28 +137,24 @@ button .avatar {
     letter-spacing: .2em;
     align-items: stretch;
 }
-
 .charactersStyle #extraInfo {
     visibility: hidden;
     transition: 0.3s ease-in-out;
 }
-
 .charactersStyle:hover {
     background-color: #b78e25da;
     transform: scale(1.2);
-    text-shadow:black; 
+    text-shadow:black;
     position:relative;
     top: -51px;
     padding: 10px 15px;
     text-align: center;
     height: 22em;
 }
-
 .charactersStyle:hover #extraInfo {
     visibility: visible;
     /*transition-delay: 0.2s;*/
 }
-
 #showCharacter {
     margin-left: 5%;
     position: inherit;
@@ -187,14 +172,12 @@ footer {
     color: white;
     letter-spacing: .2em;
 }
-
 #imgFooter1 {
     display: flexbox;
     width: 5em;
     height: 3em;
     justify-content: space-between;
 }
-
 #imgFooter2 {
     display: flexbox;
     width: 5em;
